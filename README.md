@@ -22,7 +22,7 @@ This is a simple Python3 application that manages student records from a Postgre
     enrollment_date DATE
 );`
 
-`INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES
+- `INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES
 ('John', 'Doe', 'john.doe@example.com', '2023-09-01'),
 ('Jane', 'Smith', 'jane.smith@example.com', '2023-09-01'),
 ('Jim', 'Beam', 'jim.beam@example.com', '2023-09-02');
