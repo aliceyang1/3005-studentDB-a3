@@ -13,7 +13,20 @@ This is a simple Python3 application that manages student records from a Postgre
 
 - Open pgAdmin 4
 - Create a new database called `school_db` in pgAdmin 4
-- Using the query tool for the newly created database, open and run the included `a3setup.sql` file in pgAdmin 4
+- Using the query tool for the newly created database, open and run:
+- `CREATE TABLE students (
+    student_id SERIAL PRIMARY KEY,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    enrollment_date DATE
+);
+
+INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES
+('John', 'Doe', 'john.doe@example.com', '2023-09-01'),
+('Jane', 'Smith', 'jane.smith@example.com', '2023-09-01'),
+('Jim', 'Beam', 'jim.beam@example.com', '2023-09-02');
+`
 - This creates the `students` table and inserts the initial data
 
 Run the `SELECT * FROM students` in the query tool to test that database is set up correctly
